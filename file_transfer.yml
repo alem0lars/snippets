@@ -1,0 +1,6 @@
+file:upload:
+  do: exec
+  desc: Upload the file to file.io
+  command: >
+    gpg -c <<file>>;
+    curl -F "file=@<<file>>.gpg" 'https://file.io?expires=<<expires(1w,2w,1m,1y)>>'
