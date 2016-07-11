@@ -1,4 +1,4 @@
-file:upload:
+file:upload:inet:
   do: exec
   desc: Upload the file to file.io
   command: >
