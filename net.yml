@@ -3,3 +3,9 @@ net:ext_ip:
   desc: Get information about my external IP
   command: >
     curl http://ip-api.com/json
+
+net:tcpdump:
+  do: exec
+  desc: Listen traffic on port
+  command: >
+    sudo tcpdump -vnqt -s 0 -A -i <<iface>> port <<port>>
