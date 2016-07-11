@@ -1,0 +1,5 @@
+net:ext_ip:
+  do: exec
+  desc: Get information about my external IP
+  command: >
+    curl http://ip-api.com/json
