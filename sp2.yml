@@ -1,0 +1,5 @@
+sa:signatures:
+  do: exec
+  desc: Get the events signatures
+  command: >
+    echo '<<log>>' jq '.events | .[] | .policy_name' | sort | uniq

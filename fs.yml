@@ -1,0 +1,11 @@
+fs:watch:
+  do: exec
+  desc: Watch a file for changes and execute a command
+  command: >
+    while true; do
+      change=$(inotifywait -e close_write,moved_to,create .)
+      change=${change#./ * }
+      if [ "$change" = "<<file_name>>" ]; then
+        <<command>>
+      fi
+    done
