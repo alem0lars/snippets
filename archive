@@ -1,0 +1,5 @@
+zlib:extract:
+  do: exec
+  desc: Get the events signatures
+  command: >
+    printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - <<filepath>> |gzip -dc
